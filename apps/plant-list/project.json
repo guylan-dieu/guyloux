@@ -1,28 +1,31 @@
 {
-  "name": "guyloux",
+  "name": "plant-list",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
   "prefix": "app",
-  "sourceRoot": "apps/guyloux/src",
+  "sourceRoot": "apps/plant-list/src",
   "tags": [],
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:application",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/guyloux",
-        "index": "apps/guyloux/src/index.html",
-        "browser": "apps/guyloux/src/main.ts",
+        "outputPath": "dist/apps/plant-list",
+        "index": "apps/plant-list/src/index.html",
+        "browser": "apps/plant-list/src/main.ts",
         "polyfills": ["zone.js"],
-        "tsConfig": "apps/guyloux/tsconfig.app.json",
+        "tsConfig": "apps/plant-list/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/guyloux/src/favicon.ico", "apps/guyloux/src/assets"],
-        "styles": ["apps/guyloux/src/styles.scss"],
+        "assets": [
+          "apps/plant-list/src/favicon.ico",
+          "apps/plant-list/src/assets"
+        ],
+        "styles": ["apps/plant-list/src/styles.scss"],
         "scripts": [],
-        "server": "apps/guyloux/src/main.server.ts",
+        "server": "apps/plant-list/src/main.server.ts",
         "prerender": true,
         "ssr": {
-          "entry": "apps/guyloux/server.ts"
+          "entry": "apps/plant-list/server.ts"
         }
       },
       "configurations": {
@@ -53,10 +56,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "buildTarget": "guyloux:build:production"
+          "buildTarget": "plant-list:build:production"
         },
         "development": {
-          "buildTarget": "guyloux:build:development"
+          "buildTarget": "plant-list:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -64,7 +67,7 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "buildTarget": "guyloux:build"
+        "buildTarget": "plant-list:build"
       }
     },
     "lint": {
@@ -74,14 +77,14 @@
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/guyloux/jest.config.ts"
+        "jestConfig": "apps/plant-list/jest.config.ts"
       }
     },
     "serve-static": {
       "executor": "@nx/web:file-server",
       "options": {
-        "buildTarget": "guyloux:build",
-        "staticFilePath": "dist/apps/guyloux/browser",
+        "buildTarget": "plant-list:build",
+        "staticFilePath": "dist/apps/plant-list/browser",
         "spa": true
       }
     }

@@ -1,9 +1,9 @@
 /* eslint-disable */
 export default {
-  displayName: 'guyloux',
+  displayName: 'plant-list',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
-  coverageDirectory: '../../coverage/apps/guyloux',
+  coverageDirectory: '../../coverage/apps/plant-list',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': [
       'jest-preset-angular',
